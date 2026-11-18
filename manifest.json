@@ -1,0 +1,17 @@
+{
+  "name": "JALONY_ELITE DISCUSSION",
+  "short_name": "JALONY_ELITE",
+  "description": "ISW Dar es Salaam · Wanafunzi wote wa Tanzania",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#071a3a",
+  "theme_color": "#071a3a",
+  "lang": "sw",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

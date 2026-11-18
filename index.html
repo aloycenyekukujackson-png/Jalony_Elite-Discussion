@@ -568,7 +568,7 @@ $('ps').onclick=()=>{document.querySelectorAll('[data-pn]').forEach(i=>periods[i
 $('snd').onclick=$('snd2').onclick=()=>audio();$('tb').onclick=()=>ring('s');$('tb2').onclick=()=>ring('e');
 $('lg').onclick=()=>{live={link:$('ll').value.trim(),title:$('lt').value.trim()};sv('bhrm_live',live);rl();if(live.link&&!/youtu/.test(live.link))window.open(live.link,'_blank','noopener')};
 $('lc').onclick=()=>{live={};sv('bhrm_live',live);rl()};
-$('sad').onclick=()=>{const a=$('st').value.trim();if(!a)return;slides.push({t:a,x:$('sx').value});sv('bhrm_sl',slides);cur=slides.length-1;$('st').value=$('sx').value='';rsl()};
+$('sad').onclick=()=>{const a=$('st').value.trim();if(!a){alert(t('slNeed'));$('st').focus();return}slides.push({t:a,x:$('sx').value});sv('bhrm_sl',slides);cur=slides.length-1;$('st').value=$('sx').value='';rsl()};
 $('sdl').onclick=()=>{if(!slides.length)return;slides.splice(cur,1);sv('bhrm_sl',slides);cur=Math.max(0,cur-1);rsl()};
 $('sp2').onclick=()=>{if(cur>0)cur--;rsl()};$('sn2').onclick=()=>{if(cur<slides.length-1)cur++;rsl()};
 $('na').onclick=()=>{const x=$('nt').value.trim();if(!x)return;notes.unshift({x,t:new Date().toLocaleString()});sv('bhrm_nt',notes);$('nt').value='';rn()};
@@ -607,6 +607,7 @@ window.addEventListener('hashchange',()=>{const h=location.hash.slice(1);if(MENU
 $('qd').value=todayStr();
 
 /* ---- Tafsiri za ziada ---- */
+Object.assign(L.sw,{slNeed:"Andika kichwa cha slide kwanza"});Object.assign(L.en,{slNeed:"Type a slide title first"});
 Object.assign(L.sw,{authSub:"Wanafunzi wote wa Tanzania · ISW Dar es Salaam",doLogin:"Ingia",doReg:"Jisajili",lK:"Barua pepe au namba ya usajili",fP2:"Nenosiri",fN:"Jina kamili",fE:"Barua pepe",fM:"Namba ya simu",fR:"Namba ya usajili (reg no)",fP:"Nenosiri (angalau herufi 6)",agree:"Nakubali Masharti na Sera ya Faragha na Hakimiliki",auFill:"Jaza sehemu zote",auPw:"Nenosiri liwe na angalau herufi 6",auAgree:"Kubali Sera ya Faragha kwanza",auExists:"Namba ya usajili au barua pepe tayari imesajiliwa",auBad:"Taarifa si sahihi",dash:"Dashibodi",policy:"Sera & Hakimiliki",dQuiz:"Quiz ulizofanya",dAvg:"Wastani wa alama",dProf:"Wasifu wangu",dAns:"Majibu yangu ya quiz ya dakika 5",dNone:"Bado hujafanya quiz.",dStart:"Anza quiz ya dakika 5",dOut:"Toka",dYour:"Jibu lako",dRight:"Jibu sahihi",dOK:"Sahihi",dNo:"Si sahihi",cpy:"© 2026 Jackson Nyekuku Aloyce (@jalony_elite) · ISW Dar es Salaam · Haki zote zimehifadhiwa"});
 Object.assign(L.en,{authSub:"All students of Tanzania · ISW Dar es Salaam",doLogin:"Log in",doReg:"Register",lK:"Email or registration no.",fP2:"Password",fN:"Full name",fE:"Email",fM:"Mobile number",fR:"Registration number (reg no)",fP:"Password (at least 6 characters)",agree:"I agree to the Terms, Privacy Policy and Copyright notice",auFill:"Fill in all fields",auPw:"Password must be at least 6 characters",auAgree:"Accept the Privacy Policy first",auExists:"Reg no or email is already registered",auBad:"Incorrect details",dash:"Dashboard",policy:"Privacy & Copyright",dQuiz:"Quizzes taken",dAvg:"Average score",dProf:"My profile",dAns:"My 5-minute quiz answers",dNone:"No quiz taken yet.",dStart:"Start 5-minute quiz",dOut:"Log out",dYour:"Your answer",dRight:"Correct answer",dOK:"Correct",dNo:"Incorrect",cpy:"© 2026 Jackson Nyekuku Aloyce (@jalony_elite) · ISW Dar es Salaam · All rights reserved"});
 
